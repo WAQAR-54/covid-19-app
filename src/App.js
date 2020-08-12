@@ -100,25 +100,11 @@ export default () => {
 
     return (
         <div className='container' >
-        <div className={classes.root}>
-       <Grid item xs={12}  className={classes.margin}>
-          <NavBar />
-        </Grid>
-      <Grid container spacing={3}>
-        <Grid item xs={4}>
-
-        <CasesReports totalData={countryData.totalData} />
-        </Grid>
-        <Grid item xs={8}>
-        <CountrySelector handleChangeCountry={handleChangeCountry} />
-        <Chart historicalData={countryData.historicalData} />
-        </Grid>
-       
-      </Grid>
-       
-      <Footer />
-
-    </div> 
+       <NavBar />
+            <CountrySelector handleChangeCountry={handleChangeCountry} />
+            <CasesReports totalData={countryData.totalData} />
+            <Chart historicalData={countryData.historicalData} />
+            <Footer />
         </div >
     );
 }
