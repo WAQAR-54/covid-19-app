@@ -30,7 +30,7 @@ export default function ButtonAppBar() {
                     COVID-19 Tracker App
                     </Typography>
                 <IconButton color="inherit" aria-label="github-link" className={classes.gitHub}
-                    href="" target='_blank'>
+                    href="https://github.com/WAQAR-54/covid-19-app" target='_blank'>
                     <GitHub />
                 </IconButton>
             </Toolbar>
