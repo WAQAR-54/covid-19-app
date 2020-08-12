@@ -5,38 +5,10 @@ import { NavBar ,CountrySelector, CasesReports,Chart,Footer } from './components
 import './style/App.css';
 //import Grid from '@material-ui/core/Grid';
 //import { Paper } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
+//import {useStyles} from '@material-ui/core/styles';
 
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    
-      
-    },
-    margin:{
-      marginBottom: '10px',
-      backgroundColor:'blue',
-      color:'red'
-    },
-    inputLabel: {
-      color: 'white',
-      fontSize: 'larger',
-      backgroundColor:'red'
-  },
-  select: {
-      fontWeight: 'bold',
-      fontSize: 'large'
-  
-     
-    },
-  }));
 
 export default () => {
 
