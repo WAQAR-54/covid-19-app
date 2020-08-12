@@ -16,7 +16,7 @@ export default function(){
     return(
         <div className={classes.footerContainer}>
             <hr/>
-           Ⓒ 2020 made by @Murtaza Hanzala 
+           Ⓒ 2020 made by @Waqar Azeem
         </div>
     );
 }

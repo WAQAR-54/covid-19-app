@@ -1,8 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { NavBar, CasesReports, CountrySelector, Chart, Footer } from './components';
+//import React from 'react';
+import { NavBar ,CountrySelector, CasesReports,Chart,Footer } from './components';
 // import { Container  } from '@material-ui/core';
 import './style/App.css';
-// import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid';
+//import { Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    
+      
+    },
+    margin:{
+      marginBottom: '10px',
+      backgroundColor:'blue',
+      color:'red'
+    },
+    inputLabel: {
+      color: 'white',
+      fontSize: 'larger',
+      backgroundColor:'red'
+  },
+  select: {
+      fontWeight: 'bold',
+      fontSize: 'large'
+  
+     
+    },
+  }));
 
 export default () => {
 
@@ -61,14 +95,30 @@ export default () => {
     },[]);
 
     const [countryData, setCountryData] = useState(countryInitialData);
+    const classes = useStyles();
+
 
     return (
         <div className='container' >
-            <NavBar />
-            <CountrySelector handleChangeCountry={handleChangeCountry} />
-            <CasesReports totalData={countryData.totalData} />
-            <Chart historicalData={countryData.historicalData} />
-            <Footer />
+        <div className={classes.root}>
+       <Grid item xs={12}  className={classes.margin}>
+          <NavBar />
+        </Grid>
+      <Grid container spacing={3}>
+        <Grid item xs={4}>
+
+        <CasesReports totalData={countryData.totalData} />
+        </Grid>
+        <Grid item xs={8}>
+        <CountrySelector handleChangeCountry={handleChangeCountry} />
+        <Chart historicalData={countryData.historicalData} />
+        </Grid>
+       
+      </Grid>
+       
+      <Footer />
+
+    </div> 
         </div >
     );
 }
