@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 0 ;
+    /* background-color: aqua; */
+    /* background-image: url('../image/bg.jpg'); */
+    background-image: url('https://techcrunch.com/wp-content/uploads/2020/03/GettyImages-1208505324.jpg?w=730&crop=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-image-width: 100%; */
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+      /* The file size of this background image is 93% smaller
+         to improve page load speed on mobile internet connections */
+      background-image: url(../image/bg1.jpg);
+    }
+  }
